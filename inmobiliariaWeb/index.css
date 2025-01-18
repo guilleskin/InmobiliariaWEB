@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 220);
+}
+
+header{
+    
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 20px 2px #45f3ff;
+    
+    
+    
+
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background-image: url('images/logo.png');
+    background-size: cover;
+    display: inline-block;
+    transition: 1s;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+ul a{
+    margin-left: 1rem;
+    transition: 1s;
+    color: #151515;
+
+}
+
+ul a:hover{
+    font-size: 1.5rem;
+    color: #00e77f;
+}
+
+
+
+nav{
+    display: flex;
+      
+}
+
+nav ul{
+  
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+nav div img{
+    width: 50px;
+    
+}
+
+/* encabezado */
+/* hasta aqui esta perfecto.. no tocar.  */
+
+
+
+.sell {
+    display: flex;
+    justify-content: left;
+    padding-left: 120px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    
+    flex-direction: column;
+    font-family:  'Open Sans';
+    color: #ffffff;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.9976365546218487) 0%, rgba(9,9,121,1) 23%, rgba(0,212,255,1) 75%, rgba(255,255,255,0) 100%);
+    
+
+}
+.sell{
+    display: flex;
+    flex-direction: row
+}
+.selle-info h3,p{
+    color: #d7d3d3ca;
+    font-size: small;
+}
+.selle-info h1{
+    
+    font-size: xx-large;
+    color: #ffffff;
+    
+}
+.selle-info button{
+    
+    font-size: x-large;
+    color: #ffffff;
+    background-color: rgb(170, 65, 149);
+    border-radius: 30px;
+    padding: 10px;
+    
+    
+    
+    
+}
+.selle-info button:hover{
+    transform: scale(1.2);
+    transition: 1s;
+
+}
+
+.logo-sell img{
+    width: 20rem;
+
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: #333;
+    text-align: center;
+    
+}
+
+#main-content h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+#main-content p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#lista-inmuebles {
+    margin-top: 20px;
+}
