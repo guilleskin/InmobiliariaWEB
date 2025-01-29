@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+
+<body>
+
+
+
+
+
+  <header>
+
+
+
+    <div class="container1">
+      <nav>
+        <a href="index.html">
+          <div class="logo"></div>
+        </a>
+
+        <ul>
+          <a href="vender.html">Vender</a>
+          <a href="comprar.html">Comprar</a>
+         
+          <a href="ayuda.html">Ayuda</a>
+
+
+
+
+          <div class="loginButon">
+            <a href="login.html">Iniciar Secion</a>
+
+          </div>
+
+        </ul>
+
+      </nav>
+    </div>
+
+
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <main>
+    <div class="form-container">
+      <h2>¡Hablemos!</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nombre">Asesor:</label>
+          <p id="nombre">Andrea Perez</p> <!-- Muestra el nombre -->
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo Electrónico:</label>
+          <p id="correo">apyabogadoss@gmail.com</p>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <p id="telefono">+57 304 3508996</p>
+        </div>
+
+        <br>
+        <h2>Horario de atención</h2>
+        <p> Lunes a viernes <br>
+          8:00 a. m. a 6:00 p. m. <br><br>
+          Sábado <br>
+          8:00 a. m. a 4:00 p.m. <br><br>
+          Domingo solo con cita previa.</p>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2>Envíanos un Mensaje</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar</button>
+        <p class="success-message" id="success-message">¡Mensaje enviado exitosamente!</p>
+        <p class="error-message" id="error-message">Error al enviar el mensaje. Intenta nuevamente.</p>
+      </form>
+    </div>
+
+
+  </main>
+
+  <!-- EmailJS -->
+  <script type="module">
+    import emailjs from 'https://cdn.emailjs.com/dist/email.min.js';
+    emailjs.init("6wC1LQg-8HdPXiPjn"); // Reemplaza con tu clave pública de EmailJS
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Capturar datos del formulario
+      const formData = {
+        nombre: document.getElementById("nombre").value,
+        correo: document.getElementById("correo").value,
+        telefono: document.getElementById("telefono").value,
+        mensaje: document.getElementById("mensaje").value,
+      };
+
+      const serviceID = "service_9816n5s"; // Reemplaza con tu Service ID
+      const templateID = "template_bfzsgj4"; // Reemplaza con tu Template ID
+
+      // Enviar datos a EmailJS
+      emailjs.send(serviceID, templateID, formData)
+        .then(() => {
+          document.getElementById("success-message").style.display = "block";
+          document.getElementById("error-message").style.display = "none";
+          document.getElementById("contact-form").reset();
+        })
+        .catch((error) => {
+          console.error("Error al enviar el correo:", error);
+          document.getElementById("error-message").style.display = "block";
+          document.getElementById("success-message").style.display = "none";
+        });
+    });
+  </script>
+</body>
+
+</html>

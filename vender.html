@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vender.css">
+    <title>Vender un inmueble</title>
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <nav>
+                <a href="index.html">
+                    <div class="logo"></div>
+                </a>
+                <ul>
+                    <a href="comprar.html">Comprar</a>
+                    <a href="contact.html">Contáctanos</a>
+                    <a href="ayuda.html">Ayuda</a>
+                    <div class="loginButon">
+                        <a href="login.html">Iniciar Sesión</a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="info">
+                <h1>¿Quieres vender?</h1>
+                <p>¿Tienes un inmueble que deseas vender?<br> Con nosotros puedes venderlo con facilidad y eficiencia en unos simples pasos.</p>
+            </div>
+
+            <div class="razon">
+                <div class="razon-box">
+                    <h2>📸¡Descubre el valor de tu inmueble en un instante!</h2>
+                    <p class="razon-text">¿Listo para conocer la oferta que tu propiedad merece?<br><br> Simplemente comparte con nosotros algunos
+                        detalles clave:
+                        <br>
+                        <br>
+
+                        Dirección: Indica la ubicación de tu inmueble.
+                        <br><br>
+                        Características: Cuéntanos sobre su tamaño en metros cuadrados, la antigüedad, el piso en el que
+                        se encuentra y cualquier otro detalle que lo haga especial.
+                        <br><br>
+                        No olvides dejarnos tus datos de contacto para que podamos enviarte una oferta personalizada.
+                        <br><br>
+                        ¡Es fácil y rápido!
+                        <br><br>
+
+                        </p>
+                    <button class="toggle-button">Ver detalles</button>
+                </div>
+                <div class="razon-box">
+                    <h2>🏡 ¡Tu oferta inicial está a un paso!</h2>
+                    <p class="razon-text">Una vez que recibamos tu solicitud, nuestro equipo evaluará las características de tu inmueble. <br><br>
+                        Si se ajusta a lo que buscamos, uno de nuestros expertos se pondrá en contacto contigo para
+                        presentarte una oferta inicial emocionante. 
+                        <br><br> Además, coordinaremos una visita para que podamos
+                        conocer tu propiedad en persona. 
+                        <br><br>¡Estamos ansiosos por ayudarte en este proceso!</p>
+                    <button class="toggle-button">Ver detalles</button>
+                </div>
+                <div class="razon-box">
+                    <h2>🤝 ¡Firmamos el acuerdo y te entregamos un anticipo!</h2>
+                    <p class="razon-text">Después de nuestra visita y una vez que confirmemos la oferta, si decides aceptarla,
+                        procederemos a firmar el acuerdo. <br><br> ¡Y eso no es todo! <br><br>También te entregaremos un anticipo para
+                        que puedas comenzar a planificar tu próximo paso. <br><br> ¡Estamos aquí para hacer que este proceso sea
+                        sencillo y beneficioso para ti!</p>
+                    <button class="toggle-button">Ver detalles</button>
+                </div>
+                <div class="razon-box">
+                    <h2>⚖️ ¡Es hora de la entrega!</h2>
+                    <p class="razon-text">A lo largo de todo este emocionante proceso, contarás con el apoyo de uno de nuestros expertos,
+                        quien estará a tu lado en cada paso. <br><br> Una vez que completemos el proceso de escrituración,
+                        procederemos a realizar el desembolso del valor restante. <br><br>¡Estamos aquí para asegurarnos de que
+                        todo transcurra sin problemas y con total transparencia!</p>
+                    <button class="toggle-button">Ver detalles</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="terminos">
+            <a href="terminosCondiciones.html">Términos y condiciones</a>
+            <a href="politicaPrivacidad.html">Política de privacidad</a>
+            <a href="cookies.html">Cookies</a>
+        </div>
+        <div class="terminos2">
+            <p>©2025 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const text = button.previousElementSibling;
+                text.style.display = text.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

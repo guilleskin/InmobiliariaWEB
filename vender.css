@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 220);
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 20px 2px #45f3ff;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background-image: url('images/logo.png');
+    background-size: cover;
+    display: inline-block;
+    transition: 1s;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+ul a{
+    margin-left: 1rem;
+    transition: 1s;
+    color: #151515;
+}
+
+ul a:hover{
+    font-size: 1.5rem;
+    color: #00e77f;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+nav div img{
+    width: 50px;
+}
+
+.loginButon a{
+    border: 4px solid #151515;
+    border-color: rgb(211, 77, 211);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    color: rgba(22, 21, 22, 0.826)
+}
+
+/* encabezado
+ */
+/* hasta aqui esta perfecto.. no tocar.  */
+
+/* MAIN */
+main {
+    margin-top: 1rem;
+    padding-top: 8rem;
+}
+
+/* SECCIÓN BANNER */
+.barner {
+    text-align: center;
+    background-color: #5a189a;
+    color: white;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.barner h1 {
+    font-size: 2.5rem;
+}
+
+.barner p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.info{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.info h1{
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+/* SECCIÓN RAZONES */
+.razon {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-left: 20px;
+}
+
+.razon div {
+    width: 50%;
+    
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    text-align: center;
+
+    transition: transform 0.3s;
+}
+
+.razon div:hover {
+    transform: scale(1.02);
+}
+
+.razon h2 {
+    font-size: 1rem;
+    color: #5a189a;
+}
+
+.razon p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 0.5rem;
+    display: none;  /* Ocultar por defecto */
+    transition: all 0.3s ease-in-out;
+}
+
+.razon p.visible {
+    display: block;  /* Se muestra al hacer clic */
+}
+
+.razon button {
+    margin-top: 1rem;
+    padding: 10px 15px;
+    background: #5a189a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.razon button:hover {
+    background: #9d4edd;
+}
+
+/* IMAGEN */
+.img-razon img {
+    max-width: 400px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.img-razon:hover img {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 3rem;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.terminos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.terminos a {
+    color: #00e77f;
+    text-decoration: none;
+}
+
+.terminos2 {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .razon div {
+        width: 95%;
+    }
+
+    .barner h1 {
+        font-size: 2rem;
+    }
+
+    .barner p {
+        font-size: 1rem;
+    }
+}
